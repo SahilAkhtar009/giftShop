@@ -163,7 +163,7 @@ export default function Navbar() {
             <>
               <Link to={"/"}>Home</Link>
               <Link to={"/products"}>Products</Link>
-              <Link to="/cart">Car({cartItems.length})</Link>
+              <Link to="/cart">Cart({cartItems.length})</Link>
               <Link to="/wishlist">Wishlist({wishlist.length})</Link>
               <Link to="/my-orders">My Orders</Link>
             </>
