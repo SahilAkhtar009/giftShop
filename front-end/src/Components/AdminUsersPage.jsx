@@ -13,6 +13,7 @@ export default function AdminUsersPage() {
             Authorization: `Bearer ${token}`,
           },
         });
+        console.log(res);
         setUsers(res.data);
       } catch (err) {
         console.error("Failed to load users:", err);
