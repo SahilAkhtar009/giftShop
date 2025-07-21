@@ -24,7 +24,7 @@ export default function AddProductPage() {
     const Token = JSON.parse(localStorage.getItem("userInfo"));
 
     try {
-      await axios.post("http://localhost:5000/api/products/", product, {
+      await axios.post("https://giftshop-backend-9q1n.onrender.com/api/products/", product, {
         headers: {
           Authorization: `Bearer ${Token.token}`,
         },
