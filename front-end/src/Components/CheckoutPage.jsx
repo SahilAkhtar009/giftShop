@@ -20,7 +20,7 @@ export default function CheckoutPage() {
       try {
         const Token = JSON.parse(localStorage.getItem("userInfo"));
 
-        const response = await axios.get("http://localhost:5000/api/cart/", {
+        const response = await axios.get("https://giftshop-backend-9q1n.onrender.com/api/cart/", {
           headers: {
             Authorization: `Bearer ${Token.token}`,
           },
