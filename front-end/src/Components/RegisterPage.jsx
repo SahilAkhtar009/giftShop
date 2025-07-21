@@ -13,7 +13,7 @@ export function RegisterPage() {
     e.preventDefault();
     console.log(name, email.toLowerCase, password, isAdmin);
     try {
-      const res = await axios.post("http://localhost:5000/api/users/register", {
+      const res = await axios.post("https://giftshop-backend-9q1n.onrender.com/api/users/register", {
         name,
         email,
         password,
