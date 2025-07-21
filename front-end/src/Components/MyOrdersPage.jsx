@@ -20,7 +20,7 @@ export function MyOrdersPage() {
           headers: { Authorization: `Bearer ${Token.token}` },
         };
         const res = await axios.get(
-          "http://localhost:5000/api/orders/myorders",
+          "https://giftshop-backend-9q1n.onrender.com/api/orders/myorders",
           config
         );
         setOrders(res.data);
@@ -39,7 +39,7 @@ export function MyOrdersPage() {
         headers: { Authorization: `Bearer ${Token.token}` },
       };
 
-      await axios.delete(`http://localhost:5000/api/orders/${orderId}`, config);
+      await axios.delete(`https://giftshop-backend-9q1n.onrender.com/api/orders/${orderId}`, config);
 
       setOrders((prev) => prev.filter((order) => order._id !== orderId));
       setStatus((pre) => !pre);
