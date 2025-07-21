@@ -23,7 +23,7 @@ export default function Product() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/products")
+      .get("https://giftshop-backend-9q1n.onrender.com/api/products")
       .then((res) => {
         setProducts(res.data);
         setFiltered(res.data);
