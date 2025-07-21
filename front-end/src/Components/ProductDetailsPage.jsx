@@ -28,7 +28,7 @@ export default function ProductDetailsPage() {
     if (Token) {
       alert(`${qty} item(s) of "${product.name}" added to cart`);
       const res = axios.post(
-        "http://localhost:5000/api/cart/",
+        "https://giftshop-backend-9q1n.onrender.com/api/cart/",
         { product, qty },
         {
           headers: {
