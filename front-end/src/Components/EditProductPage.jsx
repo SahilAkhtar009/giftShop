@@ -21,7 +21,7 @@ export default function EditProductPage() {
       const token = JSON.parse(localStorage.getItem("userInfo"))?.token;
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/admin/products/${id}`,
+          `https://giftshop-backend-9q1n.onrender.com/api/admin/products/${id}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -46,7 +46,7 @@ export default function EditProductPage() {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/admin/products/${id}`,
+        `https://giftshop-backend-9q1n.onrender.com/api/admin/products/${id}`,
         product,
         {
           headers: {
