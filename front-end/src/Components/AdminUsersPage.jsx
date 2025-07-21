@@ -9,7 +9,7 @@ export default function AdminUsersPage() {
       const token = JSON.parse(localStorage.getItem("userInfo"))?.token;
       console.log(token);
       try {
-        const res = await axios.get("https://giftshop-backend-9q1n.onrender.com/admin/users", {
+        const res = await axios.get("https://giftshop-backend-9q1n.onrender.com/admin/users/", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
