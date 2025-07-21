@@ -17,7 +17,7 @@ function DataProvider({ children }) {
 
   const getProducts = () => {
     axios
-      .get("http://localhost:5000/api/products")
+      .get("https://giftshop-backend-9q1n.onrender.com/api/products")
       .then((res) => {
         setProducts(res.data);
       })
@@ -29,7 +29,7 @@ function DataProvider({ children }) {
       const Token = JSON.parse(localStorage.getItem("userInfo"));
 
       // console.log(Token);
-      const response = await axios.get("http://localhost:5000/api/cart/", {
+      const response = await axios.get("https://giftshop-backend-9q1n.onrender.com/api/cart/", {
         headers: {
           Authorization: `Bearer ${Token.token}`,
         },
@@ -67,7 +67,7 @@ function DataProvider({ children }) {
 
     await axios
       .post(
-        "http://localhost:5000/api/cart/",
+        "https://giftshop-backend-9q1n.onrender.com/api/cart/",
         { product, qty },
         {
           headers: {
@@ -93,7 +93,7 @@ function DataProvider({ children }) {
       prev.filter((item) => item.product._id !== productId)
     );
     try {
-      await axios.delete(`http://localhost:5000/api/cart/${productId}`, {
+      await axios.delete(`https://giftshop-backend-9q1n.onrender.com/api/cart/${productId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -108,7 +108,7 @@ function DataProvider({ children }) {
     setWishlist((pre) => [...pre, id]);
     toast.info("Added to wishlist");
     await axios.post(
-      `http://localhost:5000/api/wishlist/${id}`,
+      `https://giftshop-backend-9q1n.onrender.com0/api/wishlist/${id}`,
       {},
       {
         headers: { Authorization: `Bearer ${token}` },
@@ -120,7 +120,7 @@ function DataProvider({ children }) {
   const removeWishList = async (id) => {
     setWishlist((prev) => prev.filter((item) => item !== id));
     toast.warning("Removed from wishlist");
-    await axios.delete(`http://localhost:5000/api/wishlist/${id}`, {
+    await axios.delete(`https://giftshop-backend-9q1n.onrender.com/api/wishlist/${id}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     await fetchWishlist();
@@ -128,7 +128,7 @@ function DataProvider({ children }) {
 
   const fetchWishlist = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/wishlist", {
+      const res = await axios.get("https://giftshop-backend-9q1n.onrender.com/api/wishlist", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
