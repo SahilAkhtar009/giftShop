@@ -14,7 +14,7 @@ export default function AdminDashboard() {
   useEffect(() => {
     const Token = JSON.parse(localStorage.getItem("userInfo"));
     axios
-      .get("http://localhost:5000/api/admin/summary", {
+      .get("https://giftshop-backend-9q1n.onrender.com/api/admin/summary", {
         headers: { Authorization: `Bearer ${Token?.token}` },
       })
       .then((res) => setSummary(res.data))
