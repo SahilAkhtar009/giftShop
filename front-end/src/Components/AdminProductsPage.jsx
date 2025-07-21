@@ -40,7 +40,7 @@ export default function AdminProductsPage() {
 
     try {
       await axios.delete(
-        `http://localhost:5000/api/admin/products/${productId}`,
+        `https://giftshop-backend-9q1n.onrender.com/api/admin/products/${productId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
