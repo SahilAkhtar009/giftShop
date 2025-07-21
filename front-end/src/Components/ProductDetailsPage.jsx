@@ -13,7 +13,7 @@ export default function ProductDetailsPage() {
   const navigate = useNavigate();
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/products/${id}`)
+      .get(`https://giftshop-backend-9q1n.onrender.com/api/products/${id}`)
       .then((res) => setProduct(res.data))
       .catch((err) => console.error(err));
   }, [id]);
