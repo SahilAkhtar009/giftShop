@@ -11,7 +11,7 @@ export default function AdminProductsPage() {
       const token = JSON.parse(localStorage.getItem("userInfo"))?.token;
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/admin/products",
+          "https://giftshop-backend-9q1n.onrender.com/api/admin/products",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
