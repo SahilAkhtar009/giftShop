@@ -108,7 +108,7 @@ function DataProvider({ children }) {
     setWishlist((pre) => [...pre, id]);
     toast.info("Added to wishlist");
     await axios.post(
-      `https://giftshop-backend-9q1n.onrender.com0/api/wishlist/${id}`,
+      `https://giftshop-backend-9q1n.onrender.com/api/wishlist/${id}`,
       {},
       {
         headers: { Authorization: `Bearer ${token}` },
