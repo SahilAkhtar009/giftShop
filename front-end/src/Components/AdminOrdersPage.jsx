@@ -26,7 +26,7 @@ export default function AdminOrdersPage() {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/admin/orders/${orderId}/status`,
+        `https://giftshop-backend-9q1n.onrender.com/api/admin/orders/${orderId}/status`,
         { status: newStatus },
         {
           headers: { Authorization: `Bearer ${token}` },
