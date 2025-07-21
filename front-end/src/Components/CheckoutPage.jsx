@@ -59,7 +59,7 @@ export default function CheckoutPage() {
         ),
       };
 
-      await axios.post("http://localhost:5000/api/orders/", orderData, config);
+      await axios.post("https://giftshop-backend-9q1n.onrender.com/api/orders/", orderData, config);
       localStorage.removeItem("giftshop-cart");
       // alert("Order placed successfully!");
       navigate("/order-success");
