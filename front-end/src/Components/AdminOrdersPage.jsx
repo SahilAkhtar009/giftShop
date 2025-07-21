@@ -7,7 +7,7 @@ export default function AdminOrdersPage() {
   const fetchOrders = async () => {
     const token = JSON.parse(localStorage.getItem("userInfo"))?.token;
     try {
-      const res = await axios.get("http://localhost:5000/api/admin/orders", {
+      const res = await axios.get("https://giftshop-backend-9q1n.onrender.com/api/admin/orders", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setOrders(res.data);
